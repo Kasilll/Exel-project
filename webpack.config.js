@@ -40,7 +40,7 @@ module.exports = {
         }
     },
     devtool: isDev ? 'source-map': false,
-    target: process.env.NODE_ENV === "development" ? "web" : "browserslist",
+    // target: process.env.NODE_ENV === "development" ? "web" : "browserslist",
     devServer: {
         open: true,
         contentBase: path.join(__dirname, 'src'),
@@ -81,9 +81,9 @@ module.exports = {
                 ],
             },
             {
-                test: /\.m?js$/,
+                test: /\.js$/,
                 exclude: /node_modules/,
-                use:jsLoaders()
+                use: jsLoaders()
             }
         ],
     },
